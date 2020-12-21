@@ -16,3 +16,8 @@ using a derivate of this dataset:
 
 `cat header.csv f.csv > final.csv`
 
+## Part 2: Data Scraping
+#### Whosdatingwho
+There is a website that allows you to look up celebrities and their dating history. `python collect_relationships.py -c <config-file.json> -o <output_file.json>` makes a json file with a dictionary for each celebrity listed in the config file (conf.json). It also makes sure to save the downloaded data in a cache, so that we do not overwhelm the website. 
+#### McGill courses
+Pulls the courses off pages with URLs of the form: https://www.mcgill.ca/study/2020-2021/courses/search?page=X where X is a number. The page# indiciates which URL will be loaded. The courses are in CSV format to stdout with the following columns (header included): CourseID, Course Name, # of credits. 
